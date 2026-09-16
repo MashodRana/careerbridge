@@ -271,6 +271,14 @@ docker-compose down -v
 
 ---
 
+## Further Reading
+
+- **[INTEGRATION.md](INTEGRATION.md)** — full widget/iframe usage guide: every `data-*` attribute and query param, auto-theming, generating embed snippets for a new platform, troubleshooting.
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** — taking this to production: hosting the widget, connecting it to the real Novara API, domain allowlist setup, pre-launch checklist.
+- **[PLAN.md](PLAN.md)** — the production-readiness plan and its current implementation status.
+
+---
+
 ## License
 
 Internal – Vivasoft / NOVARA — CareerBridge

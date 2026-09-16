@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  # ---------- NOVARA Backend (FastAPI) ----------
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  # ---------- NOVARA Frontend (nginx) ----------
+  frontend:
+    build: ./frontend
+    ports:
+      - "5000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  # ---------- WordPress ----------
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: wp_password
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wp_data:/var/www/html
+    restart: unless-stopped
+
+  # ---------- MariaDB ----------
+  db:
+    image: mariadb:10.11
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: wp_password
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  wp_data:
+  db_data:

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVARA – Career Opportunities</title>
+  <meta name="description" content="Explore open positions and apply through the NOVARA career widget." />
+  <link rel="stylesheet" href="reset.css" />
+</head>
+<body>
+
+  <!--
+    No data-company-slug here on purpose: the widget only falls back to the
+    ?companySlug= URL query param when the container has no explicit data
+    attribute, so this page stays driven by the iframe src's query string
+    (see README "Option B — Iframe"), e.g. index.html?companySlug=financfy-ltd
+  -->
+  <div id="novara-careers"></div>
+  <script src="widget.js"></script>
+
+</body>
+</html>

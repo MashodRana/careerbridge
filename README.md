@@ -275,6 +275,7 @@ docker-compose down -v
 
 - **[INTEGRATION.md](INTEGRATION.md)** — full widget/iframe usage guide: every `data-*` attribute and query param, auto-theming, generating embed snippets for a new platform, troubleshooting.
 - **[DEPLOYMENT.md](DEPLOYMENT.md)** — taking this to production: hosting the widget, connecting it to the real Novara API, domain allowlist setup, pre-launch checklist.
+- **[S3_HOSTING.md](S3_HOSTING.md)** — generating a versioned/minified build (`frontend/build.mjs`) and hosting it on S3 alone as an interim option, with real AWS CLI commands.
 - **[PLAN.md](PLAN.md)** — the production-readiness plan and its current implementation status.
 
 ---

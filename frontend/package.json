@@ -1,0 +1,13 @@
+{
+  "name": "careerbridge-widget",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Build script for CareerBridge's embeddable widget — minifies and version-stamps widget.js/index.html/reset.css into dist/.",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}
